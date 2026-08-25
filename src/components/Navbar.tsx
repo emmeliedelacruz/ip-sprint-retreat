@@ -1,4 +1,4 @@
-import { useWaitlistModal } from "@/context/WaitlistModalContext";
+import WaitlistLink from "@/components/WaitlistLink";
 
 const links = [
   { label: "About", href: "#about" },
@@ -8,8 +8,6 @@ const links = [
 ];
 
 export default function Navbar() {
-  const { openWaitlist } = useWaitlistModal();
-
   return (
     <header className="sticky top-0 z-40 flex h-[69px] items-center justify-between border-b border-white/[0.08] bg-[#f53c28] px-6 md:px-12">
       <p className="font-['Manrope'] text-[18px] font-bold uppercase tracking-[2px] text-[#faf6ea]">
@@ -28,13 +26,9 @@ export default function Navbar() {
         ))}
       </nav>
 
-      <button
-        type="button"
-        onClick={openWaitlist}
-        className="rounded-full bg-[#1a1918] px-5 py-[10px] font-['Manrope'] text-[12px] font-medium uppercase tracking-[1.2px] text-[#faf6ea] transition-opacity hover:opacity-90"
-      >
+      <WaitlistLink className="rounded-full bg-[#1a1918] px-5 py-[10px] font-['Manrope'] text-[12px] font-medium uppercase tracking-[1.2px] text-[#faf6ea] transition-opacity hover:opacity-90">
         Join Waitlist
-      </button>
+      </WaitlistLink>
     </header>
   );
 }

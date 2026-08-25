@@ -1,5 +1,3 @@
-import { WaitlistModalProvider } from "@/context/WaitlistModalContext";
-import WaitlistModal from "@/components/WaitlistModal";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
@@ -17,7 +15,7 @@ import Footer from "@/components/Footer";
 
 export default function App() {
   return (
-    <WaitlistModalProvider>
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -35,7 +33,6 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
-      <WaitlistModal />
-    </WaitlistModalProvider>
+    </>
   );
 }

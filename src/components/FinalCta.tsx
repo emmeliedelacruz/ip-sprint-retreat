@@ -1,9 +1,7 @@
-import { useWaitlistModal } from "@/context/WaitlistModalContext";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import WaitlistLink from "@/components/WaitlistLink";
 
 export default function FinalCta() {
-  const { openWaitlist } = useWaitlistModal();
-
   return (
     <section className="relative overflow-hidden bg-[#e5f557] px-6 py-16 md:py-20">
       <PhotoPlaceholder
@@ -18,13 +16,9 @@ export default function FinalCta() {
         <p className="mt-6 font-['Manrope'] text-[14px] text-[#1a1918]/60">
           Show up with your idea. Leave with a beta you can promote.
         </p>
-        <button
-          type="button"
-          onClick={openWaitlist}
-          className="mt-8 flex h-[51px] w-[260px] items-center justify-center rounded-full bg-[#4a5322] font-['DM_Sans'] text-[14px] font-medium uppercase tracking-[1.4px] text-white transition-opacity hover:opacity-90"
-        >
+        <WaitlistLink className="mt-8 flex h-[51px] w-[260px] items-center justify-center rounded-full bg-[#4a5322] font-['DM_Sans'] text-[14px] font-medium uppercase tracking-[1.4px] text-white transition-opacity hover:opacity-90">
           Join the Waitlist
-        </button>
+        </WaitlistLink>
       </div>
     </section>
   );

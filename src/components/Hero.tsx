@@ -1,9 +1,7 @@
-import { useWaitlistModal } from "@/context/WaitlistModalContext";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import WaitlistLink from "@/components/WaitlistLink";
 
 export default function Hero() {
-  const { openWaitlist } = useWaitlistModal();
-
   return (
     <section className="flex flex-col bg-[#ede4cc] md:flex-row">
       <div className="flex h-[300px] flex-col md:h-[537px] md:w-[527px]">
@@ -24,13 +22,9 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex flex-col items-start gap-3">
-          <button
-            type="button"
-            onClick={openWaitlist}
-            className="flex h-[44px] w-[266px] items-center justify-center rounded-full bg-[#4a5322] font-['DM_Sans'] text-[14px] font-medium uppercase tracking-[1.4px] text-[#faf6ea] transition-opacity hover:opacity-90"
-          >
+          <WaitlistLink className="flex h-[44px] w-[266px] items-center justify-center rounded-full bg-[#4a5322] font-['DM_Sans'] text-[14px] font-medium uppercase tracking-[1.4px] text-[#faf6ea] transition-opacity hover:opacity-90">
             Join the Waitlist
-          </button>
+          </WaitlistLink>
           <a
             href="#what-you-get"
             className="flex h-[46px] w-[266px] items-center justify-center rounded-full border border-[#4a5322] font-['DM_Sans'] text-[14px] tracking-[1.4px] text-[#4a5322] uppercase transition-colors hover:bg-[#4a5322]/5"

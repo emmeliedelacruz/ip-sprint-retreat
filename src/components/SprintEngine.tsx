@@ -1,4 +1,4 @@
-import { useWaitlistModal } from "@/context/WaitlistModalContext";
+import WaitlistLink from "@/components/WaitlistLink";
 
 const steps = [
   {
@@ -38,8 +38,6 @@ const checklist = [
 ];
 
 export default function SprintEngine() {
-  const { openWaitlist } = useWaitlistModal();
-
   return (
     <section id="agenda" className="grid grid-cols-1 bg-[#4a5322] lg:grid-cols-2">
       <div className="px-6 py-16 md:px-10 md:py-24">
@@ -139,13 +137,9 @@ export default function SprintEngine() {
             ))}
 
             <div className="p-[18px]">
-              <button
-                type="button"
-                onClick={openWaitlist}
-                className="flex h-[46px] w-full items-center justify-center rounded-[14px] bg-[#f53c28] font-['DM_Sans'] text-[16px] text-white transition-opacity hover:opacity-90"
-              >
+              <WaitlistLink className="flex h-[46px] w-full items-center justify-center rounded-[14px] bg-[#f53c28] font-['DM_Sans'] text-[16px] text-white transition-opacity hover:opacity-90">
                 Join the waitlist
-              </button>
+              </WaitlistLink>
             </div>
           </div>
         </div>
