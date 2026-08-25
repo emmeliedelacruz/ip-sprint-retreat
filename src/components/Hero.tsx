@@ -1,12 +1,17 @@
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import WaitlistLink from "@/components/WaitlistLink";
+import groupGatheringPhoto from "@/assets/images/retreat-group-gathering.jpg";
 
 export default function Hero() {
   return (
     <section className="flex flex-col bg-[#ede4cc] md:flex-row">
       <div className="flex h-[300px] flex-col md:h-[537px] md:w-[527px]">
         <PhotoPlaceholder className="h-1/2 w-full" from="#7a8a72" to="#3c4a3a" />
-        <PhotoPlaceholder className="h-1/2 w-full" from="#4a3f33" to="#1c1712" />
+        <img
+          src={groupGatheringPhoto}
+          alt="A small group gathered in a bright living room for a workshop session"
+          className="h-1/2 w-full object-cover"
+        />
       </div>
 
       <div className="flex flex-1 flex-col justify-center px-6 py-12 md:px-14 md:py-0">

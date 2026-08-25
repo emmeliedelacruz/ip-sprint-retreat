@@ -1,8 +1,8 @@
-import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import sharedTablePhoto from "@/assets/images/retreat-shared-table.jpg";
 
 export default function CoreIdea() {
   return (
-    <section id="about" className="flex flex-col items-center bg-[#e5f557] px-6 py-16 md:py-[74px]">
+    <section id="about" className="flex flex-col items-center bg-[#e5f557] px-6 py-16 md:px-14 md:py-20">
       <h2 className="max-w-[596px] text-center font-['Instrument_Serif'] text-[36px] leading-[1.1] tracking-[0.5px] text-[#134624] md:text-[57px]">
         A SPRINT BUILT FOR FOCUSED BUILDING
       </h2>
@@ -12,8 +12,12 @@ export default function CoreIdea() {
         This retreat gives you four days to build it into software.
       </p>
       <div className="relative mt-10 h-[220px] w-full max-w-[954px] overflow-hidden rounded-2xl md:h-[280px]">
-        <PhotoPlaceholder className="h-full w-full" from="#e8d9a6" to="#8a6a3d" />
-        <div className="absolute inset-0 bg-[#e5f557]/35" />
+        <img
+          src={sharedTablePhoto}
+          alt="A long reclaimed-wood table set up with laptops and notebooks in a cabin living room"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e5f557]/15" />
       </div>
     </section>
   );

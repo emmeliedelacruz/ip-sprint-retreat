@@ -1,5 +1,5 @@
-import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import WaitlistLink from "@/components/WaitlistLink";
+import retreatPhoto from "@/assets/images/retreat-desk-fireplace.jpg";
 
 export default function WaitlistSection() {
   return (
@@ -25,7 +25,11 @@ export default function WaitlistSection() {
       </div>
 
       <div className="relative min-h-[300px] flex-1 overflow-hidden md:min-h-0">
-        <PhotoPlaceholder className="h-full w-full" from="#2f3f26" to="#0f150c" />
+        <img
+          src={retreatPhoto}
+          alt="A cozy retreat living room with laptops set up by a stone fireplace, autumn forest visible through tall windows"
+          className="h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-[#3d5230]/40 to-transparent" />
       </div>
     </section>

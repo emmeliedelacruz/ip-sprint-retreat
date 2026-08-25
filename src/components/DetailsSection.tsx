@@ -25,7 +25,7 @@ export default function DetailsSection() {
           <br />
           YOUR FOCUS HIGH
         </h2>
-        <p className="mx-auto mt-4 max-w-[524px] text-center font-['Manrope'] text-[14px] leading-[1.8] text-[#8a8478]">
+        <p className="mx-auto mt-6 max-w-[524px] text-center font-['Manrope'] text-[14px] leading-[1.8] text-[#8a8478]">
           The Poconos sit within a short drive from most of the Northeast, so your travel time
           stays low and your build time stays high.
         </p>
