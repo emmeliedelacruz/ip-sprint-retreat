@@ -3,7 +3,7 @@ import WaitlistLink from "@/components/WaitlistLink";
 
 export default function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-[#e5f557] px-6 py-16 md:py-20">
+    <section className="relative overflow-hidden bg-[#e5f557] px-6 py-16 md:px-14 md:py-20">
       <PhotoPlaceholder
         className="absolute inset-0 opacity-20"
         from="#8a6a3d"
