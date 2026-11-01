@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf6ea">
+<meta name="description" content="Record your reel one talking point at a time. Your footage stays on your device.">
+<title>Reel Recording Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#faf6ea;--paper:#fffdf8;--ink:#1a1918;--red:#f53c28;--line:#e3ddd2;--soft:#6b675f;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:var(--cream);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;min-width:320px}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}a{color:inherit}.app{max-width:1000px;padding:0 26px;margin:0 auto}.mast{height:66px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dad4c9}.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:-.04em}.mark{width:26px;height:26px;transform:rotate(-6deg);border-radius:8px;background:var(--red);display:grid;place-items:center}.mark:after{content:'';width:9px;height:9px;border:3px solid white;border-radius:50%}.privacy{font-size:11px;color:var(--soft)}.intro{padding:23px 0 16px}.intro h1{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(43px,7vw,67px);font-weight:400;letter-spacing:-.05em;line-height:1;margin:0 0 6px}.intro p{font-size:13px;color:#665f58;margin:0}.progress{height:3px;background:#e3dbcf;margin-top:20px}.progress>div{height:100%;width:0;background:var(--red);transition:width .2s}.meta{display:flex;justify-content:space-between;gap:12px;font-size:11px;margin-top:8px;color:var(--soft)}.meta a{text-decoration:underline;text-underline-offset:3px}.workspace{display:grid;grid-template-columns:1fr 1fr;gap:17px;align-items:start}.prompt,.camera,.clips{border-radius:13px;overflow:hidden}.prompt{background:var(--paper);border:1px solid var(--line)}.prompt-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 21px;border-bottom:1px solid var(--line)}.prompt-head .step{color:var(--red);font-weight:700;font-size:12px}.prompt-head .label{color:#77716a;font-size:12px}.prompt-body{padding:22px}.prompt-body .say{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(30px,4vw,47px);line-height:1.08;letter-spacing:-.025em;margin:0 0 21px}.point-head{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#79736c;margin-bottom:10px}.talking-points{padding:0 0 0 19px;margin:0;display:grid;gap:12px;color:#48443e;font-size:13px;line-height:1.5}.talking-points li::marker{color:var(--red)}.delivery{border-top:1px solid var(--line);margin-top:20px;padding-top:14px;font-size:12px;line-height:1.5;color:#665e56}.delivery strong{color:#36322e}.nav{display:flex;justify-content:space-between;gap:12px;padding:16px 21px;border-top:1px solid var(--line)}.nav button{min-height:42px;border:0;background:transparent;font-size:12px;font-weight:700;padding:0 12px}.nav .next{background:var(--ink);color:#fff;border-radius:7px;padding:0 15px}.camera{background:#22201f;color:#fff}.camera-bar{padding:13px 17px;border-bottom:1px solid #45413e;display:flex;justify-content:space-between;gap:15px;align-items:center;color:#f8d9ce;font-size:11px}.camera-bar strong{font-size:12px;color:#fff}.preview{aspect-ratio:1.13/1;background:#302c29;position:relative;overflow:hidden}.preview video{height:100%;width:100%;object-fit:cover;transform:scaleX(-1);display:block}.placeholder{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:7px;background:radial-gradient(circle at 50% 40%,#4a433f,#201e1d 72%);color:#eee9e2}.lens{border:1px solid #82766d;border-radius:50%;width:90px;height:90px;display:grid;place-items:center;margin-bottom:14px}.lens::after{content:'';width:52px;height:52px;border:2px solid #beb1a5;border-radius:50%;background:radial-gradient(circle,#201e1d,#463d36)}.placeholder span{font-size:12px;color:#c9c3bd}.placeholder strong{font-size:16px}.status{position:absolute;bottom:14px;left:14px;font-size:11px;padding:7px 10px;border-radius:20px;background:#201e1db8}.rec-status{position:absolute;top:12px;left:12px;background:#fff5f1;border-radius:7px;padding:7px 11px;font-weight:700;font-size:12px;color:#ba2718;display:none}.rec-status b{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:7px}.camera-actions{padding:14px 16px 8px}.main-button{width:100%;min-height:54px;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--red);color:white;border:0;border-radius:9px;font-size:14px;font-weight:700}.main-button.stop{background:white;color:#191817}.dot{display:inline-block;width:13px;height:13px;border-radius:50%;border:2px solid currentColor}.square{display:inline-block;width:12px;height:12px;background:var(--red);border-radius:2px}.fallback{font-size:11px;color:#cfc9c2;line-height:1.5;padding:5px 17px 18px}.fallback p{margin:4px 0 9px}.native-upload{border:1px solid #8a837b;border-radius:8px;display:flex;align-items:center;justify-content:center;min-height:41px;padding:8px 10px;font-size:12px;font-weight:700;color:white;cursor:pointer}.native-upload input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}.error{margin:0 16px 10px;background:#fff4f0;color:#8b2e22;padding:11px;border-radius:6px;font-size:12px;line-height:1.4;display:none}.clips{background:var(--paper);border:1px solid var(--line);margin:18px 0 30px;padding:22px}.clips-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}.clips-head h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:31px;line-height:1;margin:0 0 5px}.clips-head p{font-size:12px;color:#6e675f;margin:0}.clips-head>span{font-size:12px;color:#756d66;white-space:nowrap}.clip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.clip-item{border:1px solid transparent;min-height:72px;border-radius:9px;background:#f7f3e9;display:flex;align-items:center;gap:9px;padding:10px;text-align:left}.clip-item.active{border-color:var(--red);background:#fffaf5}.num{width:30px;height:30px;border-radius:50%;border:1px solid #d2c9bc;display:grid;place-items:center;color:#77716a;font-size:11px;flex:none}.num.done{background:var(--red);color:white;border-color:var(--red)}.clip-item .txt{display:grid;gap:4px}.clip-item strong{font-size:11px}.clip-item small{font-size:10px;color:#767067}.clip-review{display:none;border-top:1px solid var(--line);padding-top:18px;margin-top:20px;text-align:center}.clip-review h3{font-size:15px;margin:0 0 14px;text-align:left}.clip-review video{height:340px;max-width:100%;width:230px;background:#171717;border-radius:10px;object-fit:contain}.save-btn{width:100%;max-width:360px;display:block;margin:15px auto 0;background:var(--red);color:white;border:0;border-radius:9px;min-height:48px;font-weight:700;font-size:13px}.save-guide{font-size:11px;color:#736d65;line-height:1.5;max-width:440px;margin:12px auto 0}.notice{font-size:12px;line-height:1.5;color:#555148;margin:13px 0 0}.footer{padding:0 0 28px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:#777168}.accessible-hidden{position:absolute;left:-10000px}@media(max-width:780px){.app{padding:0 15px}.mast{height:54px}.intro{padding:17px 0 14px}.intro h1{font-size:44px}.progress{margin-top:13px}.workspace{grid-template-columns:1fr;gap:12px}.prompt-body{padding:18px}.prompt-head{padding:12px 18px}.prompt-body .say{font-size:clamp(32px,7vw,40px);margin-bottom:13px}.talking-points{gap:8px;font-size:12px}.delivery{margin-top:13px}.nav{padding:12px 16px}.preview{aspect-ratio:1.34/1;max-height:310px}.camera-bar{padding:10px 15px}.camera-actions{padding:11px 15px 8px}.placeholder .lens{width:60px;height:60px;margin-bottom:5px}.lens::after{width:35px;height:35px}.clips{margin-top:12px;padding:16px}.clip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.footer{display:block}.footer span{display:block;margin-bottom:7px}}@media(max-width:370px){.clip-grid{grid-template-columns:1fr}.intro h1{font-size:39px}.prompt-body .say{font-size:31px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="mast"><div class="logo"><span class="mark" aria-hidden="true"></span>Reel studio</div><div class="privacy">Private recording workspace</div></header>
+<section class="intro"><h1>Record your reel.</h1><p>Your words, one clip at a time. No script to memorize.</p><div class="progress" aria-label="Recording progress"><div id="progress-fill"></div></div><div class="meta"><span id="progress-text">0 of 6 recorded</span><a href="https://www.instagram.com/reel/Deu1NN1OKMu/" target="_blank" rel="noopener noreferrer">View reference reel</a></div></section>
+<section class="workspace" aria-label="Recording workspace">
+<div class="prompt">
+<div class="prompt-head"><span class="step" id="step">Clip 1 of 6</span><span class="label" id="segment">The hook</span></div>
+<div class="prompt-body">
+<div class="say" id="cue">Just because you can vibe-code an app doesn't mean you should sell it.</div>
+<div class="point-head">Talking points</div>
+<ul class="talking-points" id="points"><li>Look directly into the camera.</li><li>Give the line a beat to land.</li><li>Record another take if you want.</li></ul>
+<div class="delivery"><strong>Delivery:</strong> <span id="delivery">Cold open. Direct to camera. No extra shots.</span></div>
+</div>
+<div class="nav"><button id="prev" disabled>Previous</button><button class="next" id="next">Next talking point →</button></div>
+</div>
+<div class="camera">
+<div class="camera-bar"><strong id="camera-clip">Clip 1: The hook</strong><span>Camera + audio</span></div>
+<div class="preview">
+<video id="preview" autoplay muted playsinline aria-label="Front camera preview"></video>
+<div class="placeholder" id="placeholder"><div class="lens"></div><strong>Your camera preview</strong><span>Your prompts won't appear in the recording.</span></div>
+<div class="status" id="ready" hidden>Camera and microphone ready</div>
+<div class="rec-status" id="rec-status"><b></b>Recording <span id="timer">00:00</span></div>
+</div>
+<div class="camera-actions"><button id="record" class="main-button">Enable camera</button></div>
+<div id="error" class="error" role="alert"></div>
+<div class="fallback"><p><strong>Camera not opening?</strong> Open this page directly in Safari, or use your iPhone's built-in camera.</p><label class="native-upload" for="native-record">Record or choose a clip with iPhone Camera<input id="native-record" type="file" accept="video/*" capture="user" aria-label="Record or choose a clip using the iPhone camera"></label></div>
+</div>
+</section>
+<section class="clips">
+<div class="clips-head"><div><h2>Your six clips</h2><p>Review, retake or save each clip to your iPhone.</p></div><span id="saved-count">0 saved</span></div>
+<div class="clip-grid" id="clip-grid"></div>
+<div class="clip-review" id="clip-review"><h3 id="review-title">Clip 1 playback</h3><video id="playback" playsinline controls preload="metadata"></video><button id="save" class="save-btn">Save this clip to iPhone</button><p class="save-guide">Choose Save Video or Save to Files from the iPhone share sheet. Clips also stay in this browser's local storage when available, but you should export them.</p></div>
+<p class="notice" role="status" id="notice">Nothing is uploaded to a server. Your recordings stay on this device.</p>
+</section>
+<footer class="footer"><span>Reel 1: Vibe coding vs. real software</span><span>Recording guide and local video storage only.</span></footer>
+</main>
+<script>
+(function(){
+'use strict';
+const prompts=[
+{title:"The hook",cue:"Just because you can vibe-code an app doesn't mean you should sell it.",points:["Look directly into the camera.","Give the line a beat to land.","Do a second take if you want."],delivery:"Cold open. Direct to camera. No extra shots."},
+{title:"The new gold rush",cue:"Everybody was a custom GPT expert last year. Now everybody's a software founder.",points:["First everyone was selling custom GPTs.","Now everybody wants to vibe-code an app and charge for it.","Just because you can build it doesn't mean the world needs it."],delivery:"Dry, amused delivery. Let the sarcasm do the work."},
+{title:"Does it already exist?",cue:"Does it already exist, or do you want to remix Slack because of your ego?",points:["Keep the Slack line in your own words.","Are you solving a real problem or reinventing something?","Think build versus buy, not building for the sake of it."],delivery:"Leave a beat before 'because of your ego' for the animated decision tree."},
+{title:"Business or experiment?",cue:"Is this a real business, or a little experiment?",points:["Building something for yourself is one thing.","Charging strangers to rely on it is another.","A functioning prototype is not automatically a customer-ready product."],delivery:"A reality check, not a software tutorial."},
+{title:"Who's protecting the customer?",cue:"Okay, so your app works. Cute. Who's protecting your customers?",points:["What about security, payments and personal information?","What about privacy policies, terms of service and legal obligations?","Who maintains it and fixes it when it breaks?"],delivery:"The serious turn. The editor will animate the hidden responsibilities."},
+{title:"The closing thought",cue:"Vibe coding made building software easier. It didn't make running a software business easier.",points:["Building an interface is not the same as running a company.","Deliver the approved line in your own voice.","Hold eye contact for a moment after the close."],delivery:"Strong clean ending. No additional CTA needed."}
+];
+const $=id=>document.getElementById(id);
+let current=0,stream=null,recorder=null,chunks=[],recIndex=0,recStarted=0,interval=null;
+let clips={},db=null,recording=false,recordReady=false;const ownedURLs=[];
+const formatTime=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+function showError(message){$("error").textContent=message;$("error").style.display=message?"block":"none";}
+function notice(message){$("notice").textContent=message;}
+function setRecButton(text,stopping){$("record").textContent=text;$("record").classList.toggle("stop",!!stopping);}
+function storedCount(){return Object.keys(clips).length;}
+function render(){
+ const p=prompts[current];$("step").textContent="Clip "+(current+1)+" of "+prompts.length;$("segment").textContent=p.title;
+ $("cue").textContent=p.cue;$("points").replaceChildren(...p.points.map(s=>{const li=document.createElement("li");li.textContent=s;return li;}));
+ $("delivery").textContent=p.delivery;$("camera-clip").textContent="Clip "+(current+1)+": "+p.title;
+ $("prev").disabled=recording||current===0;$("next").disabled=recording||current===prompts.length-1;
+ $("next").textContent=current===prompts.length-1?"Last talking point":"Next talking point →";
+ $("saved-count").textContent=storedCount()+" saved";$("progress-text").textContent=storedCount()+" of 6 recorded";
+ $("progress-fill").style.width=(storedCount()/6*100)+"%";
+ $("clip-grid").replaceChildren(...prompts.map((item,i)=>{
+ const b=document.createElement("button");b.type="button";b.className="clip-item"+(i===current?" active":"");b.disabled=recording;
+ const n=document.createElement("span");n.className="num"+(clips[i]?" done":"");n.textContent=clips[i]?"✓":String(i+1).padStart(2,"0");
+ const txt=document.createElement("span");txt.className="txt";const h=document.createElement("strong");h.textContent=item.title;
+ const state=document.createElement("small");state.textContent=clips[i]?"Recorded":"Not recorded yet";txt.append(h,state);
+ b.append(n,txt);b.addEventListener("click",()=>select(i));return b;
+ }));
+ const clip=clips[current];$("clip-review").style.display=clip?"block":"none";
+ if(clip){$("review-title").textContent="Clip "+(current+1)+" playback";if($("playback").src!==clip.url){$("playback").src=clip.url;$("playback").load();}}
+ else {$("playback").removeAttribute("src");$("playback").load();}
+ if(!recording){setRecButton(!recordReady?"Enable camera":clip?"Record another take":"Record clip "+(current+1),false);}
+}
+function select(i){if(recording)return;current=i;showError("");render();}
+$("prev").onclick=()=>select(Math.max(0,current-1));$("next").onclick=()=>select(Math.min(5,current+1));
+function openDb(){
+ return new Promise((resolve,reject)=>{
+  if(!window.indexedDB){reject(new Error("Local storage unavailable"));return;}
+  const request=indexedDB.open("personal-reel-studio-clips",1);
+  request.onupgradeneeded=()=>{if(!request.result.objectStoreNames.contains("clips"))request.result.createObjectStore("clips");};
+  request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);
+ });
+}
+function getAll(){return new Promise((resolve,reject)=>{
+ const tx=db.transaction("clips","readonly"),store=tx.objectStore("clips"),req=store.getAllKeys();
+ req.onerror=()=>reject(req.error);req.onsuccess=()=>{
+  const keys=req.result,values=store.getAll();values.onsuccess=()=>resolve(keys.map((key,i)=>[Number(key),values.result[i]]));
+  values.onerror=()=>reject(values.error);
+ };
+ });}
+function putClip(i,value){if(!db)return Promise.reject(new Error("Local storage unavailable"));
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction("clips","readwrite");tx.objectStore("clips").put(value,String(i));
+  tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);
+ });}
+function attachClip(index,value){
+ const url=URL.createObjectURL(value.blob);ownedURLs.push(url);clips[index]={...value,url};render();
+}
+(async()=>{
+ try{db=await openDb();const values=await getAll();for(const [index,value] of values){if(value&&value.blob)attachClip(index,value);}}
+ catch(e){notice("Browser storage isn't available. Please save every recording to Files before closing this page.");}
+ render();
+})();
+function chosenMime(){
+ if(!window.MediaRecorder)return "";
+ return ["video/mp4;codecs=avc1.42E01E,mp4a.40.2","video/mp4;codecs=h264,aac","video/mp4","video/webm;codecs=vp8,opus","video/webm"].find(type=>MediaRecorder.isTypeSupported(type))||"";
+}
+async function startCamera(){
+ showError("");
+ if(!window.isSecureContext||!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.MediaRecorder){
+  showError("This browser does not support in-page video recording. Open in Safari or use the iPhone Camera button below.");return;
+ }
+ setRecButton("Opening camera…",false);$("record").disabled=true;
+ try{
+  stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:{facingMode:"user",width:{ideal:1080},height:{ideal:1920}}});
+  $("preview").srcObject=stream;$("preview").play().catch(()=>{});
+  $("placeholder").hidden=true;$("ready").hidden=false;recordReady=true;
+ }catch(e){
+  recordReady=false;showError(e.name==="NotAllowedError"?"Camera or microphone permission was denied. Allow permissions in Safari settings for this site.":"The camera could not start. Use the native iPhone Camera option below.");
+ }finally{$("record").disabled=false;render();}
+}
+function stopRecording(){
+ if(!recording||!recorder)return;try{recorder.requestData();}catch(e){}
+ try{recorder.stop();}catch(e){showError("Couldn't finish recording. Try again.");recording=false;}
+}
+async function startRecording(){
+ if(!stream||!stream.active){recordReady=false;await startCamera();return;}
+ const mime=chosenMime();if(!mime){showError("This browser cannot record a compatible format. Use the iPhone Camera option.");return;}
+ chunks=[];recIndex=current;recStarted=Date.now();showError("");
+ try{
+  recorder=new MediaRecorder(stream,{mimeType:mime});
+  recorder.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data);};
+  recorder.onerror=()=>{recording=false;clearInterval(interval);$("rec-status").style.display="none";showError("Recording error. Use the iPhone Camera option.");render();};
+  recorder.onstop=async()=>{
+   recording=false;clearInterval(interval);$("rec-status").style.display="none";
+   const blob=new Blob(chunks,{type:recorder.mimeType||mime});
+   if(blob.size<100){showError("No video was recorded. Try again.");render();return;}
+   const ext=blob.type.includes("mp4")?"mp4":"webm";
+   const filename="Reel-1-Clip-"+String(recIndex+1).padStart(2,"0")+"."+ext;
+   const value={blob,filename,duration:Math.max(1,Math.round((Date.now()-recStarted)/1000))};
+   attachClip(recIndex,value);try{await putClip(recIndex,value);notice("Clip "+(recIndex+1)+" recorded and stored on this device. Export to Photos or Files for a permanent copy.");}
+   catch(e){notice("Clip recorded, but browser storage wasn't available. Save this clip to Files now.");}
+  };
+  recorder.start(500);recording=true;$("timer").textContent="00:00";
+  $("rec-status").style.display="block";
+  interval=setInterval(()=>$("timer").textContent=formatTime(Math.floor((Date.now()-recStarted)/1000)),500);
+  setRecButton("Stop recording",true);render();
+  setRecButton("Stop recording",true);
+ }catch(e){recording=false;showError("Unable to start this recording format. Try the iPhone Camera option.");render();}
+}
+$("record").addEventListener("click",()=>{if(recording)stopRecording();else if(!recordReady)startCamera();else startRecording();});
+$("native-record").addEventListener("change",async event=>{
+ const file=event.target.files&&event.target.files[0];if(!file)return;
+ const i=current;const ext=(file.name.split(".").pop()||"mov").replace(/[^a-z0-9]/gi,"").toLowerCase()||"mov";
+ const value={blob:file,filename:"Reel-1-Clip-"+String(i+1).padStart(2,"0")+"."+ext,duration:0};
+ attachClip(i,value);
+ try{await putClip(i,value);notice("Clip "+(i+1)+" imported from iPhone Camera and stored locally.");}
+ catch(e){notice("Clip imported. Save it to Files before leaving the page.");}
+ event.target.value="";
+});
+$("save").addEventListener("click",async()=>{
+ const clip=clips[current];if(!clip)return;const button=$("save");button.disabled=true;showError("");
+ try{
+  const file=new File([clip.blob],clip.filename,{type:clip.blob.type||"video/mp4"});
+  if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+   await navigator.share({files:[file],title:clip.filename});
+  }else{
+   const a=document.createElement("a");a.href=clip.url;a.download=clip.filename;
+   document.body.appendChild(a);a.click();a.remove();
+   notice("If the clip opens in a preview instead of downloading, tap Share and choose Save to Files.");
+  }
+ }catch(e){if(e.name!=="AbortError")showError("The save wasn't completed. Use Safari's Share menu or tap and hold the video to save.");}
+ finally{button.disabled=false;}
+});
+window.addEventListener("pagehide",()=>{if(recording)stopRecording();if(stream)stream.getTracks().forEach(track=>track.stop());});
+render();
+})();
+</script>
+</body>
+</html>
